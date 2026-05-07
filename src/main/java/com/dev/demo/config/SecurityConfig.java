@@ -99,10 +99,13 @@ public class SecurityConfig {
         return jwtAuthenticationConverter;
     }
 
-    @Bean
+   @Bean
     public CorsFilter corsFilter() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
-        corsConfiguration.addAllowedOrigin("http://localhost:5173");
+        
+        // Cho phép tất cả các nguồn (Dùng Pattern thay vì Origin để đi kèm setAllowCredentials)
+        corsConfiguration.addAllowedOriginPattern("*"); 
+        
         corsConfiguration.addAllowedMethod("*");
         corsConfiguration.addAllowedHeader("*");
         corsConfiguration.setAllowCredentials(true);
