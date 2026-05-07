@@ -10,9 +10,9 @@ spring:
 #    password: 182003
 
     # Sửa Host, Port và tên database (demo_db) cho đúng với Aiven của bạn
-    url=jdbc:mysql://mim-demo-khuongcuong59-cc8f.b.aivencloud.com:10069/mim_db
-    username=avnadmin
-    password=AVNS_ao75-zJeGMASbxHYHWI
+    url:jdbc:mysql://mim-demo-khuongcuong59-cc8f.b.aivencloud.com:10069/mim_db
+    username:avnadmin
+    password:AVNS_ao75-zJeGMASbxHYHWI
 
   jpa:
     hibernate:
